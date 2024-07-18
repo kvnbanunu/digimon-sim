@@ -1,0 +1,40 @@
+TABLE cards {
+    id VARCHAR (PRIMARYKEY)
+    title TEXT
+    colour INT
+    card_type TEXT
+    cost INT
+    level INT or NULL
+    form TEXT or NULL
+    attribute TEXT or NULL
+    rarity TEXT
+    pack_id TEXT (REFERENCES packs.id)
+}
+
+TABLE packs {
+    id TEXT (PRIMARYKEY)
+    title STRING
+    img_path TEXT
+    box BOOL
+}
+
+TABLE users {
+    id INT (PRIMARYKEY)
+    email TEXT
+    username TEXT
+    password encrypted?
+    memory INT (stored in MiB but converted to GiB/MiB when displayed)
+}
+
+TABLE user_cards {
+    user_id INT (PRIMARYKEY REFERENCES users.id)
+    card_id  TEXT(PRIMARYKEY REFERENCES cards.id)
+    amount INT (Atleast 1)
+    last_pulled DATETIME
+}
+
+TABLE user_packs {
+    user_id INT (PRIMARYKEY REFERENCES user.id)
+    pack_id  TEXT(PRIMARYKEY REFERENCES packs.id)
+    amount INT (DELETE IF ZERO)
+}

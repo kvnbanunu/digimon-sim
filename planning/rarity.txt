@@ -1,0 +1,63 @@
+Common (C) - 67%
+Uncommon (U) - 17%
+Rare (R) - 14%
+Super Rare (SR) - 2%
+Secret Rare (SEC) - 0.2%
+Alternate Art (A) - 0.12% (SEC), otherwise 0.35%
+
+
+
+
+If default card isn't foil:
+    Card can have a foil variant (F?)
+    Append id with (F?)
+
+Alternate Art and Special Rare share the same id as default card:
+    Alternate Art (A)
+    Special Rare (SP?)
+    Append id with (A) or (SP)
+
+In very special cases a specific card may have 4 versions with the same ID:
+    example Angewomon (BT3-039)
+        Base Rare (BT3-039)
+        Base Foil (BT3-039F)
+        Alternate Art (BT3-039A)
+        Full Art?? (BT3-039SP)
+
+Topper cards may be a variant or just a reprint of an existing card and will be denoted with (T):
+    example Mastemon (ST10-06T) even though the exact same card is available as (ST10-06A)
+        Could try to count them as the same card when looking through collection.
+
+Cards can have multiple colors
+
+[
+    1: Red
+    2: Blue
+    3: Yellow
+    4: Green
+    5: Black
+    6: Purple
+    7: White
+]
+
+Dual colors will be a two digit number composed of the two colors
+ie: Mastemon (ST10-06) (Yellow/Purple)
+    Color Code: 36
+
+
+
+Memory will be used to "buy" more packs or boxes.
+Two free packs per day.
+1TiB or 1024GiB to buy a case (12 boxes)
+1GiB or 1024MiB to buy a box (~42MiB per pack)
+50MiB per normal pack (1GiB 176MiB or 1200MiB per 24 pack box)
+
+Boxes will contain either 1 secret rare (SEC) or Alternate Art (A)
+
+sell duplicates prices:
+    Common (C) - 1MiB
+    UnCommon (U) - 2MiB
+    Foil (F) - 10MiB
+    Alternate Art (A) - 25MiB
+    Toppers (T) - 25MiB
+    Special (SP) - 50MiB
